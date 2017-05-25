@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Siegel Lab Tools - Comparative Modeling{% endblock %}
+{% block body %}
+
+<h1>Comparative modeling</h1>
+
+{% for message in form.input_pdb.errors %}
+   </p>Error: "{{ message }}"</p>
+{% endfor %}
+
+<form action="" method="post">
+  {{ form.hidden_tag() }}
+
+  {{ form.input_pdb.label }}
+  {{ form.input_pdb }}
+
+  {{ form.submit }}
+</form>
+
+{% endblock %}
